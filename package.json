@@ -1,0 +1,11 @@
+{
+  "name": "falcon-callback",
+  "version": "1.0.0",
+  "main": "callback-server.js",
+  "scripts": {
+    "start": "node callback-server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
