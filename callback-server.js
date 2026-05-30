@@ -6,7 +6,7 @@ const { google } = require('googleapis')
 const axios = require('axios')
 
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8080
 
 function criarOAuthClient() {
   const credentials = JSON.parse(fs.readFileSync('credentials.json'))
@@ -39,6 +39,6 @@ app.get('/auth/callback', async (req, res) => {
   }
 })
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🌐 Callback server online na porta ${PORT}`)
 })
